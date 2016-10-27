@@ -1,6 +1,6 @@
 {
 	"name": "Nabokov in English",
-	"authors": "Eugenia Kelbert & Sasha Mile Rudan",
+	"authors": "Sasha Mile Rudan & Eugenia Kelbert",
 	"version": "0.1",
 	"description": "Close analysis of Nabokov's novels written in English",
 
@@ -13,7 +13,7 @@
 				"fileIn.name":  "E"
 			},
 			"params": {
-				"fileIn.name": "<FOLDER_FLOWS>/stylistic-profile.json",
+				"fileIn.name": "<FOLDER_FLOWS>/aesthetic-analysis.json",
 				"fileIn.type": "json",
 				"fileIn.encoding": "utf-8",
 				"environment": {
@@ -67,7 +67,7 @@
 				"fileIn.name":  "E"
 			},
 			"params": {
-				"fileIn.name": "<FOLDER_FLOWS>/stylistic-profile.json",
+				"fileIn.name": "<FOLDER_FLOWS>/aesthetic-analysis.json",
 				"fileIn.type": "json",
 				"fileIn.encoding": "utf-8",
 				"environment": {
@@ -121,7 +121,7 @@
 				"fileIn.name":  "E"
 			},
 			"params": {
-				"fileIn.name": "<FOLDER_FLOWS>/stylistic-profile.json",
+				"fileIn.name": "<FOLDER_FLOWS>/aesthetic-analysis.json",
 				"fileIn.type": "json",
 				"fileIn.encoding": "utf-8",
 				"environment": {
@@ -175,7 +175,7 @@
 				"fileIn.name":  "E"
 			},
 			"params": {
-				"fileIn.name": "<FOLDER_FLOWS>/stylistic-profile.json",
+				"fileIn.name": "<FOLDER_FLOWS>/aesthetic-analysis.json",
 				"fileIn.type": "json",
 				"fileIn.encoding": "utf-8",
 				"environment": {
@@ -229,7 +229,7 @@
 				"fileIn.name":  "E"
 			},
 			"params": {
-				"fileIn.name": "<FOLDER_FLOWS>/stylistic-profile.json",
+				"fileIn.name": "<FOLDER_FLOWS>/aesthetic-analysis.json",
 				"fileIn.type": "json",
 				"fileIn.encoding": "utf-8",
 				"environment": {
@@ -283,7 +283,7 @@
 				"fileIn.name":  "E"
 			},
 			"params": {
-				"fileIn.name": "<FOLDER_FLOWS>/stylistic-profile.json",
+				"fileIn.name": "<FOLDER_FLOWS>/aesthetic-analysis.json",
 				"fileIn.type": "json",
 				"fileIn.encoding": "utf-8",
 				"environment": {
@@ -337,7 +337,7 @@
 				"fileIn.name":  "E"
 			},
 			"params": {
-				"fileIn.name": "<FOLDER_FLOWS>/stylistic-profile.json",
+				"fileIn.name": "<FOLDER_FLOWS>/aesthetic-analysis.json",
 				"fileIn.type": "json",
 				"fileIn.encoding": "utf-8",
 				"environment": {
@@ -391,7 +391,7 @@
 				"fileIn.name":  "E"
 			},
 			"params": {
-				"fileIn.name": "<FOLDER_FLOWS>/stylistic-profile.json",
+				"fileIn.name": "<FOLDER_FLOWS>/aesthetic-analysis.json",
 				"fileIn.type": "json",
 				"fileIn.encoding": "utf-8",
 				"environment": {
@@ -445,7 +445,7 @@
 				"fileIn.name":  "E"
 			},
 			"params": {
-				"fileIn.name": "<FOLDER_FLOWS>/stylistic-profile.json",
+				"fileIn.name": "<FOLDER_FLOWS>/aesthetic-analysis.json",
 				"fileIn.type": "json",
 				"fileIn.encoding": "utf-8",
 				"environment": {
@@ -499,7 +499,7 @@
 				"fileIn.name":  "E"
 			},
 			"params": {
-				"fileIn.name": "<FOLDER_FLOWS>/stylistic-profile.json",
+				"fileIn.name": "<FOLDER_FLOWS>/aesthetic-analysis.json",
 				"fileIn.type": "json",
 				"fileIn.encoding": "utf-8",
 				"environment": {
@@ -553,7 +553,7 @@
 				"fileIn.name":  "E"
 			},
 			"params": {
-				"fileIn.name": "<FOLDER_FLOWS>/stylistic-profile.json",
+				"fileIn.name": "<FOLDER_FLOWS>/aesthetic-analysis.json",
 				"fileIn.type": "json",
 				"fileIn.encoding": "utf-8",
 				"environment": {

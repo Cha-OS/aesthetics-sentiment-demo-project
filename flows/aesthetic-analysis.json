@@ -1,0 +1,215 @@
+{
+	"name": "Aesthetic analysis",
+	"authors": "Sasha Mile Rudan & Eugenia Kelbert",
+	"version": "0.1",
+	"description": "",
+
+	"data": [
+		{
+			"type": "dataset",
+			"namespace": "<NAMESPACE_DATA>",
+			"name": "plain",
+			"params": {
+				"fileIn.name":  "<FOLDER_IN>/<SUB_PROJECT_NAME> - document.txt",
+				"fileIn.type":  "text",
+				"fileIn.encoding": "utf-8"
+			},
+			"paramsProcess": {
+				"fileIn.name":  "E"
+			}
+		},
+		{
+			"type": "dataset",
+			"namespace": "<NAMESPACE_DATA>",
+			"name": "imported"
+		},
+		{
+			"type": "task",
+			"namespace": "<NAMESPACE_TASK>.import",
+			"name": "importing-the-corpus",
+			"comment": "Importing the corpus as raw text",
+			"processorNsN": "importers.ImporterText.ImporterText",
+			"execution": 0,
+			"ports": {
+				"in": {
+					"direction": "in",
+					"datasets": [
+						{
+							"name": "plain",
+							"namespace": "<NAMESPACE_DATA>"
+						}
+					]
+				},
+				"out": {
+					"direction": "out",
+					"datasets": [
+						{
+							"namespace": "<NAMESPACE_DATA>",
+							"name": "imported"
+						}
+					]
+				}
+			}
+		},
+		{
+			"type": "dataset",
+			"namespace": "<NAMESPACE_DATA>",
+			"name": "parsed"
+		},
+		{
+			"type": "task",
+			"namespace": "<NAMESPACE_TASK>.parsers",
+			"name": "words",
+			"comment": "Parsing raw text and producing 3 outputs: words, sentences, and paragraphs",
+			"processorNsN": "parsers.SplitRawIntoWords.SplitRawIntoWords",
+			"execution": 0,
+			"params": {
+				"paragraphs.separators":  ["[\\r\\n]+\\s\\s\\s\\s\\s"]
+			},
+			"ports": {
+				"in": {
+					"direction": "in",
+					"datasets": [
+						{
+							"namespace": "<NAMESPACE_DATA>",
+							"name": "imported"
+						}
+					]
+				},
+				"out": {
+					"direction": "out",
+					"datasets": [
+						{
+							"namespace": "<NAMESPACE_DATA>",
+							"name": "parsed"
+						}
+					]
+				}
+			}
+		},
+		{
+			"type": "dataset",
+			"namespace": "<NAMESPACE_DATA>.pos",
+			"name": "data-pure",
+			"shouldInvalidate": false
+		},
+		{
+			"type": "task",
+			"namespace": "<NAMESPACE_TASK>.pos",
+			"name": "parsing-pos-external",
+			"comment": "Parsing(-external) paragraphs and producing POS (Part Of Speach) tagged paragraphs",
+			"processorNsN": "pos.TaggerExternal.TaggerExternal",
+			"execution": 0,
+			"paramsProcess": {
+				"path":  "E",
+				"cmd":  "E"
+			},
+			"params": {
+				"path": "<TREE_TAGGER_PATH>",
+				"cmd": "<TREE_TAGGER_CMD_ENGLISH>"
+			},
+			"ports": {
+				"in": {
+					"direction": "in",
+					"datasets": [
+						{
+							"namespace": "<NAMESPACE_DATA>",
+							"name": "parsed"
+						}
+					]
+				},
+				"out": {
+					"direction": "out",
+					"datasets": [
+						{
+							"namespace": "<NAMESPACE_DATA>.pos",
+							"name": "data-pure"
+						}
+					]
+				}
+			}
+		},
+		{
+			"type": "dataset",
+			"namespace": "<NAMESPACE_DATA>.pos",
+			"name": "data",
+			"shouldInvalidate": false
+		},
+		{
+			"type": "task",
+			"namespace": "<NAMESPACE_TASK>.pos",
+			"name": "remapping-pos-tags",
+			"comment": "Remapping POS (Part Of Speach) tags into general tagset",
+			"processorNsN": "pos.TagsetMapping.TagsetMapping",
+			"execution": 0,
+			"paramsProcess": {
+				"fileIn.name":  "E",
+				"fileOut.name":  "E"
+			},
+			"params": {
+				"fileIn.name": "<FOLDER_IN>/tagset mapping.json",
+				"fileIn.type": "json",
+				"fileIn.encoding": "utf-8",
+				"fileOut.name": "<FOLDER_OUT>/<SUB_PROJECT_NAME> - tagset mapping - report.html",
+				"fileOut.type": ["html"],
+				"language": "english"
+			},
+			"ports": {
+				"in": {
+					"direction": "in",
+					"datasets": [
+						{
+							"namespace": "<NAMESPACE_DATA>.pos",
+							"name": "data-pure"
+						}
+					]
+				},
+				"out": {
+					"direction": "out",
+					"datasets": [
+						{
+							"namespace": "<NAMESPACE_DATA>.pos",
+							"name": "data"
+						}
+					]
+				}
+			}
+		},
+		{
+			"type": "task",
+			"namespace": "<NAMESPACE_TASK>.pos",
+			"name": "exporting-pos-document",
+			"comment": "Exporting POS representation",
+			"processorNsN": "exporters.ExporterPosAnnotatedHtml.ExporterPosAnnotatedHtml",
+			"execution": 0,
+			"params": {
+				"sentencesColors": [["#333333", "#3333FF"], ["#333333", "#33FF33"]],
+				"partOfDocument": 0.1,
+				"numberOfWordsInChunk": 100,
+				"sentaceBreak": true,
+				"paragraphBreak": true,
+				"chunkBreak": true
+			},
+			"ports": {
+				"in": {
+					"direction": "in",
+					"datasets": [
+						{
+							"namespace": "<NAMESPACE_DATA>.pos",
+							"name": "data"
+						}
+					]
+				},
+				"out": {
+					"direction": "out",
+					"datasets": [
+						{
+							"namespace": "<NAMESPACE_DATA>.pos",
+							"name": "html"
+						}
+					]
+				}
+			}
+		}
+	]
+}
