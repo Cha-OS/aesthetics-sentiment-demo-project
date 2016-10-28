@@ -176,6 +176,20 @@
 			}
 		},
 		{
+			"type": "dataset",
+			"namespace": "<NAMESPACE_DATA>.pos",
+			"name": "html",
+			"paramsProcess": {
+				"fileOut.name":  "E"
+			},
+			"params": {
+				"fileOut.name": "<FOLDER_OUT>/<SUB_PROJECT_NAME> - pos.html",
+				"fileOut.type": "html",
+				"fileOut.encoding": "utf-8"
+			},
+			"shouldInvalidate": false
+		},
+		{
 			"type": "task",
 			"namespace": "<NAMESPACE_TASK>.pos",
 			"name": "exporting-pos-document",

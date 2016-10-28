@@ -42,7 +42,7 @@
 			"type": "task",
 			"namespace": "<NAMESPACE_TASK>",
 			"name": "corpus-en",
-			"comment": "Executing stylistic-profile corpus-flow",
+			"comment": "Executing aesthetic analysis corpus-flow",
 			"processorNsN": "task-executors.TaskListExecutor.TaskListExecutor",
 			"execution": 0,
 			"forceExecute": true,
@@ -81,7 +81,7 @@
 					"task:<NAMESPACE_TASK>.parsers:words['params']['paragraphs.separators']": ["[\\r\\n]+"],
 					"task:<NAMESPACE_TASK>.pos:parsing-pos-external['params']['cmd']": "<TREE_TAGGER_CMD_ENGLISH>",
 					"task:<NAMESPACE_TASK>.pos:remapping-pos-tags['params']['language']": "english",
-					"task:<NAMESPACE_TASK>.stats:calculating-simple-stats['ports']['corpus']['datasets']":
+					"task:<NAMESPACE_TASK>.stats:calculating-simple-stats['ports']['corpus']['datasetsaes']":
 						[
 							{
 								"namespace": "corpus.english.brown",
@@ -96,7 +96,7 @@
 			"type": "task",
 			"namespace": "<NAMESPACE_TASK>",
 			"name": "sinister-en",
-			"comment": "Executing stylistic-profile corpus-flow",
+			"comment": "Executing aesthetic analysis corpus-flow",
 			"processorNsN": "task-executors.TaskListExecutor.TaskListExecutor",
 			"execution": 0,
 			"forceExecute": true,
@@ -150,7 +150,7 @@
 			"type": "task",
 			"namespace": "<NAMESPACE_TASK>",
 			"name": "pnin-en",
-			"comment": "Executing stylistic-profile corpus-flow",
+			"comment": "Executing aesthetic analysis corpus-flow",
 			"processorNsN": "task-executors.TaskListExecutor.TaskListExecutor",
 			"execution": 0,
 			"forceExecute": true,
@@ -204,7 +204,7 @@
 			"type": "task",
 			"namespace": "<NAMESPACE_TASK>",
 			"name": "lolita-en",
-			"comment": "Executing stylistic-profile corpus-flow",
+			"comment": "Executing aesthetic analysis corpus-flow",
 			"processorNsN": "task-executors.TaskListExecutor.TaskListExecutor",
 			"execution": 0,
 			"forceExecute": true,
@@ -258,7 +258,7 @@
 			"type": "task",
 			"namespace": "<NAMESPACE_TASK>",
 			"name": "speak-en",
-			"comment": "Executing stylistic-profile corpus-flow",
+			"comment": "Executing aesthetic analysis corpus-flow",
 			"processorNsN": "task-executors.TaskListExecutor.TaskListExecutor",
 			"execution": 0,
 			"forceExecute": true,
