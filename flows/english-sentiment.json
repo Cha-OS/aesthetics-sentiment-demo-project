@@ -22,18 +22,9 @@
 					"NAMESPACE_TASK": "<NAMESPACE_TASK>.sub-<SUB_PROJECT_NAME>"
 				},
 				"mappings": {
-					"dataset:<NAMESPACE_DATA>:distribution-out['params']['fileOut.type']": ["html"],
-
 					"task:<NAMESPACE_TASK>.parsers:words['params']['paragraphs.separators']": ["[\\r\\n]+"],
 					"task:<NAMESPACE_TASK>.pos:parsing-pos-external['params']['cmd']": "<TREE_TAGGER_CMD_ENGLISH>",
-					"task:<NAMESPACE_TASK>.pos:remapping-pos-tags['params']['language']": "english",
-					"task:<NAMESPACE_TASK>.stats:calculating-simple-stats['ports']['corpus']['datasets']":
-						[
-							{
-								"namespace": "corpus.english.brown",
-								"name": "distribution"
-							}
-						]
+					"task:<NAMESPACE_TASK>.pos:remapping-pos-tags['params']['language']": "english"
 				}
 			},
 			"shouldInvalidate": false
@@ -76,18 +67,9 @@
 					"NAMESPACE_TASK": "<NAMESPACE_TASK>.sub-<SUB_PROJECT_NAME>"
 				},
 				"mappings": {
-					"dataset:<NAMESPACE_DATA>:distribution-out['params']['fileOut.type']": ["html"],
-
 					"task:<NAMESPACE_TASK>.parsers:words['params']['paragraphs.separators']": ["[\\r\\n]+"],
 					"task:<NAMESPACE_TASK>.pos:parsing-pos-external['params']['cmd']": "<TREE_TAGGER_CMD_ENGLISH>",
-					"task:<NAMESPACE_TASK>.pos:remapping-pos-tags['params']['language']": "english",
-					"task:<NAMESPACE_TASK>.stats:calculating-simple-stats['ports']['corpus']['datasetsaes']":
-						[
-							{
-								"namespace": "corpus.english.brown",
-								"name": "distribution"
-							}
-						]
+					"task:<NAMESPACE_TASK>.pos:remapping-pos-tags['params']['language']": "english"
 				}
 			},
 			"shouldInvalidate": false
@@ -130,18 +112,9 @@
 					"NAMESPACE_TASK": "<NAMESPACE_TASK>.sub-<SUB_PROJECT_NAME>"
 				},
 				"mappings": {
-					"dataset:<NAMESPACE_DATA>:distribution-out['params']['fileOut.type']": ["html"],
-
 					"task:<NAMESPACE_TASK>.parsers:words['params']['paragraphs.separators']": ["[\\r\\n]+"],
 					"task:<NAMESPACE_TASK>.pos:parsing-pos-external['params']['cmd']": "<TREE_TAGGER_CMD_ENGLISH>",
-					"task:<NAMESPACE_TASK>.pos:remapping-pos-tags['params']['language']": "english",
-					"task:<NAMESPACE_TASK>.stats:calculating-simple-stats['ports']['corpus']['datasets']":
-						[
-							{
-								"namespace": "corpus.english.brown",
-								"name": "distribution"
-							}
-						]
+					"task:<NAMESPACE_TASK>.pos:remapping-pos-tags['params']['language']": "english"
 				}
 			},
 			"shouldInvalidate": false
@@ -184,18 +157,9 @@
 					"NAMESPACE_TASK": "<NAMESPACE_TASK>.sub-<SUB_PROJECT_NAME>"
 				},
 				"mappings": {
-					"dataset:<NAMESPACE_DATA>:distribution-out['params']['fileOut.type']": ["html"],
-
 					"task:<NAMESPACE_TASK>.parsers:words['params']['paragraphs.separators']": ["[\\r\\n]+"],
 					"task:<NAMESPACE_TASK>.pos:parsing-pos-external['params']['cmd']": "<TREE_TAGGER_CMD_ENGLISH>",
-					"task:<NAMESPACE_TASK>.pos:remapping-pos-tags['params']['language']": "english",
-					"task:<NAMESPACE_TASK>.stats:calculating-simple-stats['ports']['corpus']['datasets']":
-						[
-							{
-								"namespace": "corpus.english.brown",
-								"name": "distribution"
-							}
-						]
+					"task:<NAMESPACE_TASK>.pos:remapping-pos-tags['params']['language']": "english"
 				}
 			},
 			"shouldInvalidate": false
@@ -238,18 +202,9 @@
 					"NAMESPACE_TASK": "<NAMESPACE_TASK>.sub-<SUB_PROJECT_NAME>"
 				},
 				"mappings": {
-					"dataset:<NAMESPACE_DATA>:distribution-out['params']['fileOut.type']": ["html"],
-
 					"task:<NAMESPACE_TASK>.parsers:words['params']['paragraphs.separators']": ["[\\r\\n]+"],
 					"task:<NAMESPACE_TASK>.pos:parsing-pos-external['params']['cmd']": "<TREE_TAGGER_CMD_ENGLISH>",
-					"task:<NAMESPACE_TASK>.pos:remapping-pos-tags['params']['language']": "english",
-					"task:<NAMESPACE_TASK>.stats:calculating-simple-stats['ports']['corpus']['datasets']":
-						[
-							{
-								"namespace": "corpus.english.brown",
-								"name": "distribution"
-							}
-						]
+					"task:<NAMESPACE_TASK>.pos:remapping-pos-tags['params']['language']": "english"
 				}
 			},
 			"shouldInvalidate": false
