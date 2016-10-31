@@ -69,6 +69,28 @@ git clone https://github.com/Cha-OS/aesthetics-sentiment-demo-corpora
 cdbp
 ```
 
+## Creating required folders
+
++ creating **cache** folder
+
+```
+experiments/cache/aesthetics-sentiment-demo-project
+```
+
++ creating **temp** folder
+
+```
+experiments/temp/aesthetics-sentiment-demo-project
+```
+
++ creating **project dataset** folder
+
+```
+experiments/datasets/aesthetics-sentiment-demo-project
+```
+
+
+
 ## corpora flow
 
 ### Execute a corpora-flow
@@ -217,7 +239,7 @@ python RunBukvik.py -env ../../../experiments/projects/aesthetics-sentiment-demo
 python RunBukvik.py -env ../../../experiments/projects/aesthetics-sentiment-demo-project/environments/aesthetics-sentiment-demo.env.mprinc.json -exp ../../../experiments/projects/aesthetics-sentiment-demo-project/flows/aesthetic-analysis.json -cmd execTask -t "<NAMESPACE_TASK>.pos.remapping-pos-tags"
 ```
 
-### Execute particular task (`<NAMESPACE_TASK>.pos.exporting-pos-document`):
+### Execute particular task (<NAMESPACE_TASK>.pos.exporting-pos-document):
 
 (server)
 
@@ -235,3 +257,50 @@ python RunBukvik.py -env ../../../experiments/projects/aesthetics-sentiment-demo
 ```sh
 python RunBukvik.py -env ../../../experiments/projects/aesthetics-sentiment-demo-project/environments/aesthetics-sentiment-demo.env.server.json -exp ../../../experiments/projects/aesthetics-sentiment-demo-project/flows/aesthetic-analysis.json -cmd execTask -t "<NAMESPACE_TASK>.pos.exporting-pos-document"
 ```
+
+
+
+### Execute particular task (<NAMESPACE_TASK>.sentiment.parse):
+
+(server)
+
+```sh
+python RunBukvik.py -env ../experiments/projects/aesthetics-sentiment-demo-project/environments/aesthetics-sentiment-demo.env.server.json -exp ../experiments/projects/aesthetics-sentiment-demo-project/flows/aesthetic-analysis.json -cmd execTask -t "<NAMESPACE_TASK>.sentiment.parse"
+```
+
+(mprinc)
+
+```sh
+python RunBukvik.py -env ../../../experiments/projects/aesthetics-sentiment-demo-project/environments/aesthetics-sentiment-demo.env.mprinc.json -exp ../../../experiments/projects/aesthetics-sentiment-demo-project/flows/aesthetic-analysis.json -cmd execTask -t "<NAMESPACE_TASK>.sentiment.parse"
+```
+
+(zhenia)
+
+```sh
+python RunBukvik.py -env ../../../experiments/projects/aesthetics-sentiment-demo-project/environments/aesthetics-sentiment-demo.env.server.json -exp ../../../experiments/projects/aesthetics-sentiment-demo-project/flows/aesthetic-analysis.json -cmd execTask -t "<NAMESPACE_TASK>.sentiment.parse"
+```
+
+
+
+
+
+### Execute particular task (<NAMESPACE_TASK>.sentiment.export):
+
+(server)
+
+```sh
+python RunBukvik.py -env ../experiments/projects/aesthetics-sentiment-demo-project/environments/aesthetics-sentiment-demo.env.server.json -exp ../experiments/projects/aesthetics-sentiment-demo-project/flows/aesthetic-analysis.json -cmd execTask -t "<NAMESPACE_TASK>.sentiment.export"
+```
+
+(mprinc)
+
+```sh
+python RunBukvik.py -env ../../../experiments/projects/aesthetics-sentiment-demo-project/environments/aesthetics-sentiment-demo.env.mprinc.json -exp ../../../experiments/projects/aesthetics-sentiment-demo-project/flows/aesthetic-analysis.json -cmd execTask -t "<NAMESPACE_TASK>.sentiment.export"
+```
+
+(zhenia)
+
+```sh
+python RunBukvik.py -env ../../../experiments/projects/aesthetics-sentiment-demo-project/environments/aesthetics-sentiment-demo.env.server.json -exp ../../../experiments/projects/aesthetics-sentiment-demo-project/flows/aesthetic-analysis.json -cmd execTask -t "<NAMESPACE_TASK>.sentiment.export"
+```
+

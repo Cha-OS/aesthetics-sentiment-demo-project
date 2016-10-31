@@ -224,6 +224,52 @@
 					]
 				}
 			}
+		},
+		{
+			"type": "dataset",
+			"namespace": "<NAMESPACE_DATA>.sentiment",
+			"name": "data",
+			"shouldInvalidate": false
+		},
+		{
+			"type": "task",
+			"namespace": "<NAMESPACE_TASK>.sentiment",
+			"name": "parse",
+			"comment": "Provides sentiments of text",
+			"processorNsN": "sentiments.ParseSentiments.ParseSentiments",
+			"execution": 0,
+			"paramsProcess": {
+				"fileIn.name":  "E",
+				"fileOut.name":  "E"
+			},
+			"params": {
+				"fileIn.name": "<FOLDER_IN>/tagset mapping.json",
+				"fileIn.type": "json",
+				"fileIn.encoding": "utf-8",
+				"fileOut.name": "<FOLDER_OUT>/<SUB_PROJECT_NAME> - tagset mapping - report.html",
+				"fileOut.type": ["html"],
+				"language": "english"
+			},
+			"ports": {
+				"in": {
+					"direction": "in",
+					"datasets": [
+						{
+							"namespace": "<NAMESPACE_DATA>.pos",
+							"name": "data"
+						}
+					]
+				},
+				"out": {
+					"direction": "out",
+					"datasets": [
+						{
+							"namespace": "<NAMESPACE_DATA>.sentiment",
+							"name": "data"
+						}
+					]
+				}
+			}
 		}
 	]
 }
